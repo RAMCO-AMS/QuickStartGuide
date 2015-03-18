@@ -1,4 +1,9 @@
 <?php
+ /**
+  * API Written by Jason Normandin and Mark Lesswing
+  * API Doc URL : https://api.ramcoams.com/api/v2/ramco_api_v2_doc.pdf
+  */
+
 
 // PEM file is the cert file I use to validate certificate authenticity.
 const PEM_FILE = 'cacert.pem';
