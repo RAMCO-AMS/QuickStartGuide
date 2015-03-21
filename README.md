@@ -3,10 +3,11 @@ This is a simple project that will get you quickly running queries against the R
 
 Instructions:
 
-1) Download Quick Start Guide Zip
+1) Download Quick Start Guide 
 https://github.com/RAMCO-AMS/QuickStartGuide/archive/master.zip
 
 2) Unzip the archive and update line 15 in test_connection.php to add your key
+
 3) Browse to test_connection.php in your web browser
 
 
