@@ -41,6 +41,40 @@ print "<pre>";
 print_r($data);
 print "</pre>";
 
+/* Further Functions
+// get metadata for Contact entity
+$post = array();
+$post['key'] = API_KEY;
+$post['operation'] = 'GetEntityMetadata';
+$post['entity'] = 'Contact';
+$json = curl_request($post);
+$data = json_decode($json);
+print_r($data);
+
+
+// get the value/label pairs for an option set
+$post = array();
+$post['key'] = API_KEY;
+$post['operation'] = 'GetOptionSet';
+$post['entity'] = 'Contact';
+$post['attribute'] = 'cobalt_PreferredPhone';
+$json = curl_request($post);
+$data = json_decode($json);
+print_r($data);
+
+
+// get data on some Contacts
+// note that the filter statement can use AND/OR joiners and nesting
+// data from related entities can be requested by adding to the attributes argument
+//      example: cobalt_contact_cobalt_membership/cobalt_membertypeid
+$post = array();
+$post['key'] = API_KEY;
+$post['operation'] = 'GetEntities';
+$post['entity'] = 'Contact';
+$post['filter'] = 'LastName<sb>#Th# and (ModifiedOn<ge>2012-12-31 and ModifiedOn<le>2014-01-04)';
+$post['attributes'] = 'ContactId,FirstName,LastName,cobalt_EmailVerified,cobalt_NRDSID,cobalt_contact_cobalt_membership/cobalt_membertypeid,cobalt_contact_cobalt_membership/cobalt_OfficeId,cobalt_contact_cobalt_membership/statuscode';$post['maxresults'] = '5';
+
+*/
 	/**
  * Handles posting a Racmco API request.
  * @param array $post arguments to be posted to the server
